@@ -1,24 +1,11 @@
-package PPTAssignment3CoreJava;
-class Shape{
-    void drawing(){
-        System.out.println("It is drawing class.");
-    }
-}
-class Rectangle extends Shape{
-    void drawing(){
-        System.out.println("drawing rectangle shape of match box.");
-    }
-}
-class Circle extends Shape{
-    void drawing(){
-        System.out.println("drawing circle shape of sun.");
-    }
+package PPtAssignment4CoreJava;
+interface Sum{
+    int calc(int x);
 }
 public class Q_3 {
     public static void main(String[] args) {
-        Shape s = new Rectangle();
-        s.drawing();
-         s = new Circle();
-        s.drawing();
+      int b = 4;
+      Sum s = (int x) -> x+x;
+        System.out.println(s.calc(b));
     }
 }

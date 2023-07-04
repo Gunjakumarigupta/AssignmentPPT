@@ -1,28 +1,30 @@
-package PPTAssignment3CoreJava;
+package PPtAssignment4CoreJava;
 
- class colour {
-    void painting(){
-        System.out.println("Colours are use in painting");
-    }
+// Abstract method
+abstract class Colour{
+   abstract void flower();
+   abstract void tree();
 }
-class pink extends colour{
-    void painting(){
-        System.out.println("Colours are beautiful");
+class Colours extends Colour{
+    void flower(){
+        System.out.println("Roses are red.");
     }
-}
-class green extends colour{
-    void painting(){
-        System.out.println("Trees colour's are green");
+    void tree(){
+        System.out.println("Trees are green.");
     }
 }
 public class Q_2 {
+    static int sum(int a, int b){
+        return a+b;
+    }
+    static int multiply(int a, int b){
+        return a*b;
+    }
     public static void main(String[] args) {
-        pink p = new pink();
-        p.painting();
-        green g = new green();
-        g.painting();
-        colour c = new colour();
-        c.painting();
+        Colour c = new Colours();
+        c.flower();
+        c.tree();
+        System.out.println("Sum :"+sum(10,42));
+        System.out.println("Product :"+multiply(10,4));
     }
 }
-
